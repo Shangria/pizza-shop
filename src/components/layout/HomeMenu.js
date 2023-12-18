@@ -10,40 +10,40 @@ import pizza6 from "../../../public/pizza6.png";
 
 export const menuInfo = [
     {
-        name: "Frank Pepe Pizzeria Napoletana",
+        name: "Frank Pepe",
         img: pizza1,
         description: "Daily Meal ranked as one of America’s Top 10 Pepperoni Pies.  Mozzarella, fontina, grana padano, smoked pepperoni, fresh basil",
-        price: "",
+        price: "10$",
     },
     {
         name: "Sally's Apizza",
         img: pizza2,
         description: "Red veggie pie: spinach, mozzarella, feta, marinated artichoke heart, kalamata olive",
-        price: "",
+        price: "10$",
     },
     {
         name: "Henrietta Blanche",
         img: pizza3,
         description: "Red pie: mozzarella, aged provolone, fennel sausage, banana pepper,  roasted red pepper, grana padano, fresh basil",
-        price: "",
+        price: "10$",
     },
     {
         name: "Buffy Ernst ",
         img: pizza4,
         description: "Our take on the traditional buffalo chicken pie.  White pie: mozzarella, roasted chicken, blue cheese, red onion, scallion, house buffalo sauce",
-        price: "",
+        price: "10$",
     },
     {
         name: "Barbie Ernst",
         img: pizza5,
         description: "White pie: mozzarella, fontina, roasted chicken, red onion, banana pepper, house BBQ sauce.  (House slaw topping as pictured no longer available).",
-        price: "",
+        price: "10$",
     },
     {
         name: "Felix Hupert ",
         img: pizza6,
         description: "White pie: mozzarella, gruyere, caramelized onion, fresh thyme",
-        price: "",
+        price: "10$",
     },
 ];
 
@@ -57,10 +57,8 @@ const HomeMenu = () => {
                 <Image layout="fill" objectFit="contain" src="/pizza-right.png" alt="sallad"/>
             </div>
 
-            <div className="text-center">
-                <h3 className="uppercase text-gray-600 font-semibold my-2">Check out</h3>
-                <h2 className="text-primary font-bold text-xl">Menu</h2>
-            </div>
+            <h2 className="text-primary font-bold text-center text-[35px] uppercase mb-3">Menu</h2>
+
             <div className="grid grid-cols-3 gap-3 z-10 relative">
                 {
                     menuInfo.map(item => {
