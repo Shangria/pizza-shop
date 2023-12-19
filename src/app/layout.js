@@ -1,5 +1,7 @@
 import './globals.css';
 import {Roboto} from 'next/font/google';
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const inter = Roboto({subsets: ['latin'], weight: ['400', '500', '700']});
 
@@ -12,10 +14,13 @@ export default function RootLayout({children}) {
     return (
         <html lang="en">
         <body className={inter.className}>
-        <main className="max-w-4xl mx-auto p-4">
-            {children}
-        </main>
-
+        <div className="flex flex-col min-h-screen container max-w-6xl mx-auto p-4">
+            <Header/>
+            <main className="max-w-6xl mx-auto p-4 flex-grow">
+                {children}
+            </main>
+            <Footer/>
+        </div>
         </body>
         </html>
     );
