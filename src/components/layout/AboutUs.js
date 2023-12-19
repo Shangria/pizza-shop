@@ -6,7 +6,7 @@ const AboutUs = () => {
         <div className="py-8">
             <h2 className="text-primary font-bold text-center text-[35px] uppercase mb-3">About us</h2>
             <div className="w-full">
-                <div className=" w-full h-[300px] relative mb-6">
+                <div className=" w-full h-[370px] relative mb-6">
                     <Image className="rounded-t-3xl" layout="fill" objectFit="fill" src="/pizza-bg2.png" alt="pizza"/>
                 </div>
 

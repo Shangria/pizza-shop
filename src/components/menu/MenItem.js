@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const MenItem = ({itemInfo}) => {
     return (
-        <div className="bg-primaryOpacity flex flex-col p-4 rounded-xl text-center shadow-lg shadow-primary">
+        <div className="bg-primaryOpacity cursor-pointer hover:shadow-orange-600 hover:scale-[1.02] transition backdrop-blur-sm flex flex-col p-4 rounded-xl text-center shadow-lg shadow-primary">
             <div className="mb-3">
                 <Image src={itemInfo.img} alt="pizza"/>
             </div>
