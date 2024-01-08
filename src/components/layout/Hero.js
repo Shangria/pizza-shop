@@ -1,5 +1,5 @@
 import Image from "next/image";
-import RightArrow from "@/components/icons/Right-arrow";
+import RightArrow from "../icons/Right-arrow";
 
 const Hero = () => {
     return (
@@ -13,7 +13,7 @@ const Hero = () => {
                     wouldn’t feed ours.</p>
                 <div className="flex gap-4 text-sm">
                     <button
-                        className="bg-primary uppercase items-center flex gap-2 text-white px-8 py-2 rounded-full">Order
+                        className="bg-primary text-white">Order
                         now <RightArrow/></button>
                     <button className="flex gap-2 py-2 text-gray-600 font-semibold">Learn more <RightArrow/></button>
 

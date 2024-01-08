@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import MenItem from "@/components/menu/MenItem";
+import MenItem from "../menu/MenItem";
 import pizza1 from "../../../public/pizza1.png";
 import pizza2 from "../../../public/pizza2.png";
 import pizza3 from "../../../public/pizza3.png";
