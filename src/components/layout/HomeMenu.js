@@ -50,11 +50,11 @@ export const menuInfo = [
 const HomeMenu = () => {
     return (
         <>
-            <div className="h-[300px] w-[300px] left-0 absolute">
-                <Image layout="fill" objectFit="contain" src="/chilli2.png" alt="sallad"/>
+            <div className="left-0 absolute">
+                <Image width={300} height={300} src="/chilli2.png" alt="sallad"/>
             </div>
             <div className="h-[500px] w-[230px] right-0  absolute">
-                <Image layout="fill" objectFit="contain" src="/pizza-right.png" alt="sallad"/>
+                <Image width={500} height={230} src="/pizza-right.png" alt="sallad"/>
             </div>
 
             <h2 className="text-primary font-bold text-center text-[35px] uppercase mb-3">Menu</h2>
