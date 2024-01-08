@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import Image from "next/image";
 import googleLogo from "/public/google-logo.png";
 import Link from "next/link";
+import { toast } from 'react-toastify';
 
 const RegisterPage = () => {
     const [email, setEmail] = useState('');
@@ -28,13 +29,14 @@ const RegisterPage = () => {
                 return response.json();
             })
             .then(data => {
-                console.log(data);
                 setUserCreatingState(true)
                 setPassword('')
                 setEmail('')
+                toast.success("You've successfully registered");
             })
             .catch(error => {
                 console.error("error: ", error);
+                toast.error("Registration is not complete");
             });
     };
 

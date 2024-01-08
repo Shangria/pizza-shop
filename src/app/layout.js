@@ -2,6 +2,8 @@ import './globals.scss';
 import {Roboto} from 'next/font/google';
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
+import {ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Roboto({subsets: ['latin'], weight: ['400', '500', '700']});
 
@@ -20,8 +22,10 @@ export default function RootLayout({children}) {
                 {children}
             </main>
             <Footer/>
+            <ToastContainer/>
         </div>
         </body>
+
         </html>
     );
 }
