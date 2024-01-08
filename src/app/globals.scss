@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input{
+    @apply border-orange-300 p-2 border bg-amber-50;
+    @apply w-full block rounded-md;
+}
+
+button{
+    @apply uppercase items-center justify-center flex cursor-pointer gap-2 text-center px-8 py-2 rounded-full;
+
+    &:hover{
+        @apply shadow-primary;
+    }
+}
