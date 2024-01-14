@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import Image from "next/image";
 import googleLogo from "/public/google-logo.png";
 import Link from "next/link";
-import { toast } from 'react-toastify';
+import {toast} from 'react-toastify';
 
 const RegisterPage = () => {
     const [email, setEmail] = useState('');
@@ -29,9 +29,9 @@ const RegisterPage = () => {
                 return response.json();
             })
             .then(data => {
-                setUserCreatingState(true)
-                setPassword('')
-                setEmail('')
+                setUserCreatingState(true);
+                setPassword('');
+                setEmail('');
                 toast.success("You've successfully registered");
             })
             .catch(error => {
@@ -73,7 +73,10 @@ const RegisterPage = () => {
                     login with google
                 </button>
             </form>
-
+            <div className="text-center my-4 text-gray-500">
+                Exiting account? {""}
+                <Link className="underline" href="/login"> Login here → </Link>
+            </div>
         </div>
     );
 };
