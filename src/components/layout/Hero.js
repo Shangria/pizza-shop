@@ -15,7 +15,7 @@ const Hero = () => {
                     <button
                         className="bg-primary text-white">Order
                         now <RightArrow/></button>
-                    <button className="flex gap-2 py-2 text-gray-600 font-semibold">Learn more <RightArrow/></button>
+                    <button className="flex gap-2 py-2 text-gray-600 font-semibold border-primaryOpacity border">Learn more <RightArrow/></button>
 
                 </div>
             </div>
