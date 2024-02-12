@@ -5,7 +5,7 @@ import {User} from "../../../models/User";
 import bcrypt from "bcrypt";
 import GoogleProvider from "next-auth/providers/google";
 
-const handler = NextAuth({
+export const authOptions={
     secret: process.env.NEXTAUTH_SECRET,
     providers: [
         GoogleProvider({
@@ -35,6 +35,8 @@ const handler = NextAuth({
             }
         })
     ]
-});
+}
+
+const handler = NextAuth(authOptions);
 
 export {handler as GET, handler as POST};
