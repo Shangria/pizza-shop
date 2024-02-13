@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const UserInfo = ({userData}) => {
     return (
-        <Link href="/profile" class="flex items-center mr-2">
+        <Link href="/profile" className="flex items-center mr-2">
                 {
                     userData?.name ? <>
                         <div className="mr-2">

@@ -47,7 +47,6 @@ const ProfilePage = () => {
             });
     };
 
-console.log( session?.data?.user?.image)
     return (
         <div className="py-8">
             <h2 className="text-primary font-bold text-center text-[35px] uppercase mb-3">Profile</h2>
