@@ -4,6 +4,7 @@ import Image from "next/image";
 import googleLogo from "/public/google-logo.png";
 import Link from "next/link";
 import {toast} from 'react-toastify';
+import {signIn} from "next-auth/react";
 
 const RegisterPage = () => {
     const [email, setEmail] = useState('');
@@ -68,7 +69,7 @@ const RegisterPage = () => {
                 <button type="submit" className="lowercase text-gray-500 mb-4 w-full mx-auto">or
                     login with provider
                 </button>
-                <button type="submit" className="lowercase border border-gray-300  text-gray-500 mb-4 w-full mx-auto">
+                <button type="button" onClick={()=>signIn("google", {callbackUrl:'/'})}  className="lowercase border border-gray-300  text-gray-500 mb-4 w-full mx-auto">
                     <Image width={20} height={20} src={googleLogo} alt="googleLogo"/>
                     login with google
                 </button>

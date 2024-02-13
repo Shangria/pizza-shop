@@ -19,7 +19,7 @@ const Header = () => {
                 <Link href="">Contact</Link>
 
             </nav>
-            <nav className="flex">
+            <nav className="flex min-w-[220px] justify-center">
                 {
                     !isLoading ?
                         (status === "authenticated" ?

@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import Image from "next/image";
 import googleLogo from "../../../public/google-logo.png";
 import {signIn} from "next-auth/react";
+import {toast} from "react-toastify";
 
 
 const LoginPage = () => {
@@ -12,7 +13,13 @@ const LoginPage = () => {
     const handleForLogin = async (e) => {
         e.preventDefault();
 
-        await signIn('credentials', {email, password, callbackUrl:'/'});
+        if(email && password){
+            await signIn('credentials', {email, password, callbackUrl:'/'});
+        } else {
+            toast.error("Login is not complete");
+        }
+
+
     };
 
     return (
@@ -37,7 +44,7 @@ const LoginPage = () => {
                 <button type="submit" className="lowercase text-gray-500 mb-4 w-full mx-auto">or
                     login with provider
                 </button>
-                <button onClick={()=>signIn("google", {callbackUrl:'/'})} type="submit" className="lowercase border border-gray-300  text-gray-500 mb-4 w-full mx-auto">
+                <button type="button" onClick={()=>signIn("google", {callbackUrl:'/'})} className="lowercase border border-gray-300  text-gray-500 mb-4 w-full mx-auto">
                     <Image width={20} height={20} src={googleLogo} alt="googleLogo"/>
                     login with google
                 </button>
