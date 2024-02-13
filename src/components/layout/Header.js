@@ -22,7 +22,7 @@ const Header = () => {
             <nav className="flex min-w-[220px] justify-center">
                 {
                     !isLoading ?
-                        (status === "authenticated" ?
+                        (status === "authenticated" && session ?
                             <>
                                 <UserInfo userData={session?.data?.user}/>
                                 <button onClick={() => signOut()}
