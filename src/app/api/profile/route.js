@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import {getServerSession} from "next-auth";
 import {authOptions} from "../../api/auth/[...nextauth]/route";
 import {User} from "../../../app/models/User";
+/*
 export async function PUT(req) {
     try {
         const data = await req.json();
@@ -23,4 +24,4 @@ export async function PUT(req) {
         console.error('Ошибка при обновлении пользователя:', error);
         return new Response(JSON.stringify({ error: 'Internal Server Error' }), { status: 500 });
     }
-}
+}*/

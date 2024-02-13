@@ -12,8 +12,8 @@ const ProfilePage = () => {
     const {status} = session;
 
     useEffect(() => {
-        if(status==="authenticated"){
-            setUserName(session?.data?.user.name)
+        if (status === "authenticated") {
+            setUserName(session?.data?.user.name);
         }
     }, [status, session]);
 
@@ -26,7 +26,7 @@ const ProfilePage = () => {
     }
     const infoUpdate = async (e) => {
         e.preventDefault();
-       await fetch('/api/profile', {
+        await fetch('/api/profile', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -47,13 +47,19 @@ const ProfilePage = () => {
             });
     };
 
-
+console.log( session?.data?.user?.image)
     return (
         <div className="py-8">
             <h2 className="text-primary font-bold text-center text-[35px] uppercase mb-3">Profile</h2>
             <div className="flex items-center justify-center">
                 <div className="w-[100px] h-[100px] relative mr-2 ">
-                    <Image className="rounded-full" layout="fill" src={session?.data?.user?.image} alt="user-logo"/>
+                    {
+                        session?.data?.user?.image ?
+                            <Image className="rounded-full" layout="fill" src={session?.data?.user?.image}
+                                   alt="user logo"/> :
+                            <Image className="rounded-full" layout="fill"  src="/pizza_placeholder.png"
+                                   alt="pizza fun"/>
+                    }
                     <div className="w-[30px] h-[30px] absolute  bottom-0 right-0 cursor-pointer">
                         <Image layout="fill" src="./change-avatar.svg" alt="user-logo"/>
                     </div>
