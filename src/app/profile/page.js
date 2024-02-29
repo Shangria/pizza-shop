@@ -54,9 +54,9 @@ const ProfilePage = () => {
                 <div className="w-[100px] h-[100px] relative mr-2 ">
                     {
                         session?.data?.user?.image ?
-                            <Image className="rounded-full" layout="fill" src={session?.data?.user?.image}
+                            <Image className="rounded-full" fill src={session?.data?.user?.image}
                                    alt="user logo"/> :
-                            <Image className="rounded-full" layout="fill"  src="/pizza_placeholder.png"
+                            <Image className="rounded-full" fill  src="/pizza_placeholder.png"
                                    alt="pizza fun"/>
                     }
                     <div className="w-[30px] h-[30px] absolute  bottom-0 right-0 cursor-pointer">
