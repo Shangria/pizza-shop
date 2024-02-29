@@ -28,9 +28,7 @@ const ProfilePage = () => {
         e.preventDefault();
         await fetch('/api/profile', {
             method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: {'Content-Type': 'application/json',},
             body: JSON.stringify({
                 name: userName,
             }),
